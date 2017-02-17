@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>assets/envmaps/wobbly-bridge/CREDITS.txt</file>
+        <file>assets/envmaps/wobbly-bridge/wobbly_bridge_4k_cube_irradiance.dds</file>
+        <file>assets/envmaps/wobbly-bridge/wobbly_bridge_4k_cube_radiance.dds</file>
+        <file>assets/envmaps/wobbly-bridge/wobbly_bridge_4k_cube_specular.dds</file>
+    </qresource>
+</RCC>

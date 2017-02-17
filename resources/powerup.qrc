@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>assets/powerup/powerup.obj</file>
+        <file>assets/powerup/basecolor.png</file>
+        <file>assets/powerup/metalness.png</file>
+        <file>assets/powerup/roughness.png</file>
+        <file>assets/powerup/ambientocclusion.png</file>
+        <file>assets/powerup/normal.png</file>
+    </qresource>
+</RCC>
