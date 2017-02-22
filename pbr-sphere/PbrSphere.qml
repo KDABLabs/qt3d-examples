@@ -82,6 +82,36 @@ Entity {
     }
 
     Entity {
+        Transform {
+            id: transform
+            property real angle: 0.0
+
+            readonly property real radianAngle: angle * 2 * Math.PI / 360
+            readonly property real radius: 5
+            readonly property real x: radius * Math.cos(radianAngle)
+            readonly property real y: 0
+            readonly property real z: radius * Math.sin(radianAngle)
+
+            scale: 10
+            translation: Qt.vector3d(x, y, z)
+
+            NumberAnimation on angle {
+                loops: Animation.Infinite
+                duration: 10000
+                from: 0
+                to: 360
+            }
+        }
+
+        PointLight {
+            id: pointLight
+            color: "white"
+            intensity: 1
+        }
+        components: [ pointLight, transform ]
+    }
+
+    Entity {
         components: [
             SphereMesh {
                 slices: 60
