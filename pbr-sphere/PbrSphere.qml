@@ -82,6 +82,35 @@ Entity {
     }
 
     Entity {
+        components: [
+            EnvironmentLight {
+                irradiance: TextureLoader {
+                    source: "qrc:/assets/envmaps/wobbly-bridge/wobbly_bridge_4k_cube_irradiance.dds"
+
+                    minificationFilter: Texture.LinearMipMapLinear
+                    magnificationFilter: Texture.Linear
+                    wrapMode {
+                        x: WrapMode.ClampToEdge
+                        y: WrapMode.ClampToEdge
+                    }
+                    generateMipMaps: false
+                }
+                specular: TextureLoader {
+                    source: "qrc:/assets/envmaps/wobbly-bridge/wobbly_bridge_4k_cube_specular.dds"
+
+                    minificationFilter: Texture.LinearMipMapLinear
+                    magnificationFilter: Texture.Linear
+                    wrapMode {
+                        x: WrapMode.ClampToEdge
+                        y: WrapMode.ClampToEdge
+                    }
+                    generateMipMaps: false
+                }
+            }
+        ]
+    }
+
+    Entity {
         Transform {
             id: transform
             property real angle: 0.0
@@ -122,29 +151,6 @@ Entity {
                 baseColor: scene.baseColor
                 metalness: scene.metalness
                 roughness: scene.roughness
-
-                environmentIrradiance: TextureLoader {
-                    source: "qrc:/assets/envmaps/wobbly-bridge/wobbly_bridge_4k_cube_irradiance.dds"
-
-                    minificationFilter: Texture.LinearMipMapLinear
-                    magnificationFilter: Texture.Linear
-                    wrapMode {
-                        x: WrapMode.ClampToEdge
-                        y: WrapMode.ClampToEdge
-                    }
-                    generateMipMaps: false
-                }
-                environmentSpecular: TextureLoader {
-                    source: "qrc:/assets/envmaps/wobbly-bridge/wobbly_bridge_4k_cube_specular.dds"
-
-                    minificationFilter: Texture.LinearMipMapLinear
-                    magnificationFilter: Texture.Linear
-                    wrapMode {
-                        x: WrapMode.ClampToEdge
-                        y: WrapMode.ClampToEdge
-                    }
-                    generateMipMaps: false
-                }
             }
         ]
     }

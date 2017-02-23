@@ -82,6 +82,36 @@ Entity {
     }
 
     Entity {
+        components: [
+            EnvironmentLight {
+                id: envLight
+                irradiance: TextureLoader {
+                    source: "qrc:/assets/envmaps/wobbly-bridge/wobbly_bridge_4k_cube_irradiance.dds"
+
+                    minificationFilter: Texture.LinearMipMapLinear
+                    magnificationFilter: Texture.Linear
+                    wrapMode {
+                        x: WrapMode.ClampToEdge
+                        y: WrapMode.ClampToEdge
+                    }
+                    generateMipMaps: false
+                }
+                specular: TextureLoader {
+                    source: "qrc:/assets/envmaps/wobbly-bridge/wobbly_bridge_4k_cube_specular.dds"
+
+                    minificationFilter: Texture.LinearMipMapLinear
+                    magnificationFilter: Texture.Linear
+                    wrapMode {
+                        x: WrapMode.ClampToEdge
+                        y: WrapMode.ClampToEdge
+                    }
+                    generateMipMaps: false
+                }
+            }
+        ]
+    }
+
+    Entity {
         Transform {
             id: transform
             property real angle: 0.0
@@ -125,28 +155,6 @@ Entity {
                 roughness: TextureLoader { source: "qrc:/assets/powerup/roughness.png" }
                 normal: TextureLoader { source: "qrc:/assets/powerup/normal.png" }
                 ambientOcclusion: TextureLoader { source: "qrc:/assets/powerup/ambientocclusion.png" }
-                environmentIrradiance: TextureLoader {
-                    source: "qrc:/assets/envmaps/wobbly-bridge/wobbly_bridge_4k_cube_irradiance.dds"
-
-                    minificationFilter: Texture.LinearMipMapLinear
-                    magnificationFilter: Texture.Linear
-                    wrapMode {
-                        x: WrapMode.ClampToEdge
-                        y: WrapMode.ClampToEdge
-                    }
-                    generateMipMaps: false
-                }
-                environmentSpecular: TextureLoader {
-                    source: "qrc:/assets/envmaps/wobbly-bridge/wobbly_bridge_4k_cube_specular.dds"
-
-                    minificationFilter: Texture.LinearMipMapLinear
-                    magnificationFilter: Texture.Linear
-                    wrapMode {
-                        x: WrapMode.ClampToEdge
-                        y: WrapMode.ClampToEdge
-                    }
-                    generateMipMaps: false
-                }
             }
         ]
     }
