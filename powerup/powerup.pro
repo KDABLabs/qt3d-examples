@@ -1,6 +1,7 @@
 TEMPLATE = app
 
 QT += 3dcore 3drender 3dinput 3dquick qml quick 3dquickextras
+CONFIG += resources_big
 
 HEADERS += \
 

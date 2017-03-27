@@ -1,6 +1,7 @@
 TEMPLATE = app
 
 QT += quick
+CONFIG += resources_big
 
 HEADERS += \
 
