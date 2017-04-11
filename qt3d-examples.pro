@@ -2,5 +2,6 @@ TEMPLATE = subdirs
 
 SUBDIRS += \
     pbr-sphere \
-    powerup
+    powerup \
+    baked-keyframe-animation
 
