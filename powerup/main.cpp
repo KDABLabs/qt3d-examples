@@ -36,13 +36,24 @@
 **
 ****************************************************************************/
 
+#include <Qt3DAnimation/QAnimationAspect>
+#include <Qt3DQuick/QQmlAspectEngine>
 #include <QGuiApplication>
 #include <Qt3DQuickExtras/Qt3DQuickWindow>
+#include <QtQml>
 
 int main(int argc, char **argv)
 {
     QGuiApplication app(argc, argv);
+
+#if defined(Q_OS_MAC)
+    const QString envmapFormat = QLatin1String("-16f");
+#else
+    const QString envmapFormat = QLatin1String("");
+#endif
+
     Qt3DExtras::Quick::Qt3DQuickWindow view;
+    view.engine()->qmlEngine()->rootContext()->setContextProperty(QLatin1String("_envmapFormat"), envmapFormat);
     view.setSource(QUrl("qrc:/main.qml"));
     view.show();
     return app.exec();

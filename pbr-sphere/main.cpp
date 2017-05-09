@@ -38,6 +38,7 @@
 
 #include <QGuiApplication>
 #include <QQuickView>
+#include <QtQml>
 
 int main(int argc, char **argv)
 {
@@ -48,8 +49,14 @@ int main(int argc, char **argv)
 
     QGuiApplication app(argc, argv);
 
-    QQuickView view;
+#if defined(Q_OS_MAC)
+    const QString envmapFormat = QLatin1String("-16f");
+#else
+    const QString envmapFormat = QLatin1String("");
+#endif
 
+    QQuickView view;
+    view.engine()->rootContext()->setContextProperty(QLatin1String("_envmapFormat"), envmapFormat);
     view.resize(800, 600);
     view.setResizeMode(QQuickView::SizeRootObjectToView);
     view.setSource(QUrl("qrc:/main.qml"));

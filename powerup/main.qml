@@ -76,7 +76,7 @@ Entity {
     }
 
     SkyboxEntity {
-        baseName: "qrc:/assets/envmaps/wobbly-bridge/wobbly_bridge_4k_cube_radiance"
+        baseName: "qrc:/assets/envmaps/wobbly-bridge/wobbly_bridge_4k" + _envmapFormat + "_cube_radiance"
         extension: ".dds"
         gammaCorrect: true
     }
@@ -86,7 +86,7 @@ Entity {
             EnvironmentLight {
                 id: envLight
                 irradiance: TextureLoader {
-                    source: "qrc:/assets/envmaps/wobbly-bridge/wobbly_bridge_4k_cube_irradiance.dds"
+                    source: "qrc:/assets/envmaps/wobbly-bridge/wobbly_bridge_4k" + _envmapFormat + "_cube_irradiance.dds"
 
                     minificationFilter: Texture.LinearMipMapLinear
                     magnificationFilter: Texture.Linear
@@ -97,7 +97,7 @@ Entity {
                     generateMipMaps: false
                 }
                 specular: TextureLoader {
-                    source: "qrc:/assets/envmaps/wobbly-bridge/wobbly_bridge_4k_cube_specular.dds"
+                    source: "qrc:/assets/envmaps/wobbly-bridge/wobbly_bridge_4k" + _envmapFormat + "_cube_specular.dds"
 
                     minificationFilter: Texture.LinearMipMapLinear
                     magnificationFilter: Texture.Linear

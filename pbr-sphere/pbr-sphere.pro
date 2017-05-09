@@ -9,7 +9,8 @@ SOURCES += \
     main.cpp
 
 OTHER_FILES += \
-    main.qml
+    main.qml \
+    PbrSphere.qml
 
 RESOURCES += \
     main.qrc \
