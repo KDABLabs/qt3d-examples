@@ -1,0 +1,33 @@
+<RCC>
+    <qresource prefix="/">
+        <file>assets/tower-defence/barrel.obj</file>
+        <file>assets/tower-defence/modular_bridge.obj</file>
+        <file>assets/tower-defence/modular_bridgeextension.obj</file>
+        <file>assets/tower-defence/modular_floor1.obj</file>
+        <file>assets/tower-defence/modular_floor2.obj</file>
+        <file>assets/tower-defence/modular_floor3.obj</file>
+        <file>assets/tower-defence/modular_floor4.obj</file>
+        <file>assets/tower-defence/modular_floor5.obj</file>
+        <file>assets/tower-defence/modular_floor6.obj</file>
+        <file>assets/tower-defence/modular_fullwall.obj</file>
+        <file>assets/tower-defence/modular_halfwall.obj</file>
+        <file>assets/tower-defence/modular_ramp.obj</file>
+        <file>assets/tower-defence/modular_turret.obj</file>
+        <file>assets/tower-defence/modular_wallexterior.obj</file>
+        <file>assets/tower-defence/modular_wallinterior.obj</file>
+        <file>assets/tower-defence/sci-fi-door.obj</file>
+        <file>assets/tower-defence/modular/Material_Base_Color.png</file>
+        <file>assets/tower-defence/modular/Material_Emissive.png</file>
+        <file>assets/tower-defence/modular/Material_Height.png</file>
+        <file>assets/tower-defence/modular/Material_Metallic.png</file>
+        <file>assets/tower-defence/modular/Material_Mixed_AO.png</file>
+        <file>assets/tower-defence/modular/Material_Normal_OpenGL.png</file>
+        <file>assets/tower-defence/modular/Material_Roughness.png</file>
+        <file>assets/tower-defence/barrel-textures/Barrel_Base_Color.png</file>
+        <file>assets/tower-defence/barrel-textures/Barrel_Height.png</file>
+        <file>assets/tower-defence/barrel-textures/Barrel_Metallic.png</file>
+        <file>assets/tower-defence/barrel-textures/Barrel_Mixed_AO.png</file>
+        <file>assets/tower-defence/barrel-textures/Barrel_Normal_OpenGL.png</file>
+        <file>assets/tower-defence/barrel-textures/Barrel_Roughness.png</file>
+    </qresource>
+</RCC>
