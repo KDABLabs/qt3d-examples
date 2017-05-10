@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>PbrSphereScene.qml</file>
+        <file>Spheres.qml</file>
+        <file>Environment.qml</file>
+    </qresource>
+</RCC>
