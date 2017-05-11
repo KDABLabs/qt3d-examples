@@ -14,6 +14,5 @@ OTHER_FILES += \
 
 RESOURCES += \
     main.qrc \
-    ../resources/powerup.qrc \
     ../resources/wobbly-bridge.qrc
 
