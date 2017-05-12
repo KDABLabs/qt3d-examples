@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Environment.qml</file>
+        <file>PbrCubeScene.qml</file>
+    </qresource>
+</RCC>

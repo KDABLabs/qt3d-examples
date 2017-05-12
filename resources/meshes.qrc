@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>assets/meshes/roundedcube.obj</file>
+    </qresource>
+</RCC>

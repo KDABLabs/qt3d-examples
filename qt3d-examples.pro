@@ -5,5 +5,6 @@ SUBDIRS += \
     pbr-spheres \
     powerup \
     baked-keyframe-animation \
-    tower-defence
+    tower-defence \
+    pbr-textured-cube
 
