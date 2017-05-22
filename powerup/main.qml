@@ -60,13 +60,8 @@ Entity {
         id: mainCamera
         position: Qt.vector3d(-10, 0, 0)
         viewCenter: Qt.vector3d(0, 0, 0)
-
-        NumberAnimation on exposure {
-            from: -2; to: 2
-            duration: 5000
-            easing.type: Easing.SineCurve
-            loops: Animation.Infinite
-        }
+        exposure: 1.7
+        fieldOfView: 60
     }
 
     OrbitCameraController {
@@ -76,6 +71,8 @@ Entity {
     }
 
     SkyboxEntity {
+        // Optional: Use the irradiance instead of the radiance for a simple blurry background
+        // baseName: "qrc:/assets/envmaps/wobbly-bridge/wobbly_bridge_4k" + _envmapFormat + "_cube_irradiance"
         baseName: "qrc:/assets/envmaps/wobbly-bridge/wobbly_bridge_4k" + _envmapFormat + "_cube_radiance"
         extension: ".dds"
         gammaCorrect: true
@@ -117,7 +114,7 @@ Entity {
             property real angle: 0.0
 
             readonly property real radianAngle: angle * 2 * Math.PI / 360
-            readonly property real radius: 5
+            readonly property real radius: 10
             readonly property real x: radius * Math.cos(radianAngle)
             readonly property real y: 0
             readonly property real z: radius * Math.sin(radianAngle)
@@ -136,13 +133,16 @@ Entity {
         PointLight {
             id: pointLight
             color: "white"
-            intensity: 1
+            intensity: 0.2
         }
         components: [ pointLight, transform ]
     }
 
     Entity {
         components: [
+            Transform {
+                scale: 1.7
+            },
             Mesh {
                 source: "qrc:/assets/powerup/powerup.obj"
             },
