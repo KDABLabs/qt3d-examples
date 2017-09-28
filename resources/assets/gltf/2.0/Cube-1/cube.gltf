@@ -1,0 +1,359 @@
+{
+    "accessors" : [
+        {
+            "bufferView" : 0, 
+            "componentType" : 5121, 
+            "count" : 108, 
+            "max" : [
+                71
+            ], 
+            "min" : [
+                0
+            ], 
+            "type" : "SCALAR"
+        }, 
+        {
+            "bufferView" : 1, 
+            "componentType" : 5126, 
+            "count" : 72, 
+            "max" : [
+                2.283815383911133, 
+                2.528195381164551, 
+                0.5999443531036377
+            ], 
+            "min" : [
+                -0.3323121666908264, 
+                -0.5999435186386108, 
+                -2.165637493133545
+            ], 
+            "type" : "VEC3"
+        }, 
+        {
+            "bufferView" : 2, 
+            "componentType" : 5126, 
+            "count" : 72, 
+            "max" : [
+                1.0, 
+                1.0, 
+                1.0
+            ], 
+            "min" : [
+                -1.0, 
+                -1.0, 
+                -0.9999999403953552
+            ], 
+            "type" : "VEC3"
+        }, 
+        {
+            "bufferView" : 3, 
+            "componentType" : 5123, 
+            "count" : 72, 
+            "max" : [
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            "min" : [
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            "type" : "VEC4"
+        }, 
+        {
+            "bufferView" : 4, 
+            "componentType" : 5126, 
+            "count" : 72, 
+            "max" : [
+                1.0, 
+                0.9999989867210388, 
+                0.0, 
+                0.0
+            ], 
+            "min" : [
+                0.0, 
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            "type" : "VEC4"
+        }, 
+        {
+            "bufferView" : 5, 
+            "componentType" : 5126, 
+            "count" : 1, 
+            "max" : [
+                1.0, 
+                0.0, 
+                0.0, 
+                0.0, 
+                0.0, 
+                1.0, 
+                0.0, 
+                0.0, 
+                0.0, 
+                0.0, 
+                1.0, 
+                0.0, 
+                0.00886082649230957, 
+                0.004121065139770508, 
+                -0.09441757202148438, 
+                1.0
+            ], 
+            "min" : [
+                1.0, 
+                0.0, 
+                0.0, 
+                0.0, 
+                0.0, 
+                1.0, 
+                0.0, 
+                0.0, 
+                0.0, 
+                0.0, 
+                1.0, 
+                0.0, 
+                0.00886082649230957, 
+                0.004121065139770508, 
+                -0.09441757202148438, 
+                1.0
+            ], 
+            "type" : "MAT4"
+        }, 
+        {
+            "bufferView" : 6, 
+            "componentType" : 5126, 
+            "count" : 30, 
+            "max" : [
+                1.2083333333333333
+            ], 
+            "min" : [
+                0.0
+            ], 
+            "type" : "SCALAR"
+        }, 
+        {
+            "bufferView" : 7, 
+            "componentType" : 5126, 
+            "count" : 30, 
+            "max" : [
+                1.0067061185836792, 
+                0.5137456059455872, 
+                0.0
+            ], 
+            "min" : [
+                0.0, 
+                0.0, 
+                -1.0860296487808228
+            ], 
+            "type" : "VEC3"
+        }, 
+        {
+            "bufferView" : 8, 
+            "componentType" : 5126, 
+            "count" : 31, 
+            "max" : [
+                2.4583333333333335
+            ], 
+            "min" : [
+                1.2083333333333333
+            ], 
+            "type" : "SCALAR"
+        }, 
+        {
+            "bufferView" : 9, 
+            "componentType" : 5126, 
+            "count" : 31, 
+            "max" : [
+                0.0, 
+                0.3631278872489929, 
+                0.004993454087525606, 
+                1.0
+            ], 
+            "min" : [
+                -0.3047371804714203, 
+                -0.015940846875309944, 
+                -0.34806498885154724, 
+                0.9317222237586975
+            ], 
+            "type" : "VEC4"
+        }
+    ], 
+    "animations" : [
+        {
+            "channels" : [
+                {
+                    "sampler" : 0, 
+                    "target" : {
+                        "node" : 2, 
+                        "path" : "translation"
+                    }
+                }, 
+                {
+                    "sampler" : 1, 
+                    "target" : {
+                        "node" : 2, 
+                        "path" : "rotation"
+                    }
+                }
+            ], 
+            "samplers" : [
+                {
+                    "input" : 6, 
+                    "interpolation" : "LINEAR", 
+                    "output" : 7
+                }, 
+                {
+                    "input" : 8, 
+                    "interpolation" : "LINEAR", 
+                    "output" : 9
+                }
+            ]
+        }
+    ], 
+    "asset" : {
+        "generator" : "Khronos Blender glTF 2.0 exporter", 
+        "version" : "2.0"
+    }, 
+    "bufferViews" : [
+        {
+            "buffer" : 0, 
+            "byteLength" : 108, 
+            "byteOffset" : 0, 
+            "target" : 34963
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 864, 
+            "byteOffset" : 108, 
+            "target" : 34962
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 864, 
+            "byteOffset" : 972, 
+            "target" : 34962
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 576, 
+            "byteOffset" : 1836, 
+            "target" : 34962
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 1152, 
+            "byteOffset" : 2412, 
+            "target" : 34962
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 64, 
+            "byteOffset" : 3564
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 120, 
+            "byteOffset" : 3628
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 360, 
+            "byteOffset" : 3748
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 124, 
+            "byteOffset" : 4108
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 496, 
+            "byteOffset" : 4232
+        }
+    ], 
+    "buffers" : [
+        {
+            "byteLength" : 4728, 
+            "uri" : "cube.bin"
+        }
+    ], 
+    "materials" : [
+        {
+            "name" : "Material", 
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.6400000190734865, 
+                    0.6400000190734865, 
+                    0.6400000190734865, 
+                    1.0
+                ], 
+                "metallicFactor" : 0.0
+            }
+        }
+    ], 
+    "meshes" : [
+        {
+            "name" : "Cube", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "JOINTS_0" : 3, 
+                        "NORMAL" : 2, 
+                        "POSITION" : 1, 
+                        "WEIGHTS_0" : 4
+                    }, 
+                    "indices" : 0, 
+                    "material" : 0
+                }
+            ]
+        }
+    ], 
+    "nodes" : [
+        {
+            "children" : [
+                1, 
+                2
+            ], 
+            "name" : "Armature", 
+            "translation" : [
+                -0.00886082649230957, 
+                -0.004121065139770508, 
+                0.09441757202148438
+            ]
+        }, 
+        {
+            "mesh" : 0, 
+            "name" : "Cube", 
+            "skin" : 0, 
+            "translation" : [
+                0.00886082649230957, 
+                0.004121065139770508, 
+                -0.09441757202148438
+            ]
+        }, 
+        {
+            "name" : "Armature_Bone"
+        }
+    ], 
+    "scene" : 0, 
+    "scenes" : [
+        {
+            "name" : "Scene", 
+            "nodes" : [
+                0
+            ]
+        }
+    ], 
+    "skins" : [
+        {
+            "inverseBindMatrices" : 5, 
+            "joints" : [
+                2
+            ], 
+            "skeleton" : 0
+        }
+    ]
+}

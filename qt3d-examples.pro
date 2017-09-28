@@ -6,5 +6,6 @@ SUBDIRS += \
     powerup \
     baked-keyframe-animation \
     tower-defence \
-    pbr-textured-cube
+    pbr-textured-cube \
+    skinned-mesh
 

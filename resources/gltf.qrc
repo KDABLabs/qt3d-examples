@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>assets/gltf/2.0/Cube-1/cube.bin</file>
+        <file>assets/gltf/2.0/Cube-1/cube.gltf</file>
+        <file>assets/gltf/2.0/Cube-1/out.json</file>
+        <file>assets/gltf/2.0/Cube-2/cube.bin</file>
+        <file>assets/gltf/2.0/Cube-2/cube.gltf</file>
+        <file>assets/gltf/2.0/Cube-2/out.json</file>
+        <file>assets/gltf/2.0/RiggedFigure/RiggedFigure.gltf</file>
+        <file>assets/gltf/2.0/RiggedFigure/RiggedFigure0.bin</file>
+        <file>assets/gltf/2.0/RiggedSimple/RiggedSimple.gltf</file>
+        <file>assets/gltf/2.0/RiggedSimple/RiggedSimple0.bin</file>
+        <file>assets/gltf/2.0/Cube-0/cube.bin</file>
+        <file>assets/gltf/2.0/Cube-0/cube.gltf</file>
+    </qresource>
+</RCC>
