@@ -33,5 +33,10 @@
         <file>assets/gltf/2.0/Test-4/out.bin</file>
         <file>assets/gltf/2.0/Test-4/out.gltf</file>
         <file>assets/gltf/2.0/Test-4/out.json</file>
+        <file>assets/gltf/2.0/Robot/robot_metallic.png</file>
+        <file>assets/gltf/2.0/Robot/robot_roughness.png</file>
+        <file>assets/gltf/2.0/Robot/robot_normal.png</file>
+        <file>assets/gltf/2.0/Robot/robot_basecolor.png</file>
+        <file>assets/gltf/2.0/Robot/robot_occlusion.png</file>
     </qresource>
 </RCC>
