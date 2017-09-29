@@ -17,5 +17,21 @@
         <file>assets/gltf/2.0/Robot/walk.json</file>
         <file>assets/gltf/2.0/Robot/samba.json</file>
         <file>assets/gltf/2.0/Robot/thriller.json</file>
+        <file>assets/gltf/2.0/Cube-2/cube-baked.gltf</file>
+        <file>assets/gltf/2.0/Cube-2/cube-baked.bin</file>
+        <file>assets/gltf/2.0/Test-0/out.bin</file>
+        <file>assets/gltf/2.0/Test-0/out.gltf</file>
+        <file>assets/gltf/2.0/Test-1/out.bin</file>
+        <file>assets/gltf/2.0/Test-1/out.gltf</file>
+        <file>assets/gltf/2.0/Test-1/out.json</file>
+        <file>assets/gltf/2.0/Test-2/out.bin</file>
+        <file>assets/gltf/2.0/Test-2/out.gltf</file>
+        <file>assets/gltf/2.0/Test-2/out.json</file>
+        <file>assets/gltf/2.0/Test-3/out.bin</file>
+        <file>assets/gltf/2.0/Test-3/out.gltf</file>
+        <file>assets/gltf/2.0/Test-3/out.json</file>
+        <file>assets/gltf/2.0/Test-4/out.bin</file>
+        <file>assets/gltf/2.0/Test-4/out.gltf</file>
+        <file>assets/gltf/2.0/Test-4/out.json</file>
     </qresource>
 </RCC>
