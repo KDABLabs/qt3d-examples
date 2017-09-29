@@ -10,7 +10,15 @@ Entity {
     property url source: ""
     property alias createJointsEnabled: skeleton.createJointsEnabled
     property alias transform: transform
-    property color baseColor: "red"
+
+    // TODO: Redo in C++ with logic to switch between texture or constant solid color
+    // and enable/disable shader graph layers accordingly
+    property alias baseColor: material.baseColor
+    property alias metalness: material.metalness
+    property alias roughness: material.roughness
+    property alias normal: material.normal
+    property alias ambientOcclusion: material.ambientOcclusion
+
     property alias rootJoint: skeleton.rootJoint
     property alias skeleton: skeleton
 
@@ -30,10 +38,22 @@ Entity {
             }
         },
         Material {
+            id: material
+
+            property var baseColor: "red"
+            property var metalness: 0.1
+            property var roughness: 0.2
+            property var normal: Qt.rgba(0.5, 0.5, 1.0, 1.0); // Neutral normal map color
+            property var ambientOcclusion: "white"
+
             effect: root.effect
 
             parameters: [
-                Parameter { name: "baseColor"; value: root.baseColor }
+                Parameter { name: "baseColorMap"; value: material.baseColor },
+                Parameter { name: "metalnessMap"; value: material.metalness },
+                Parameter { name: "roughnessMap"; value: material.roughness },
+                Parameter { name: "normalMap"; value: material.normal },
+                Parameter { name: "ambientOcclusionMap"; value: material.ambientOcclusion }
             ]
         }
     ]

@@ -83,7 +83,11 @@ DefaultSceneEntity {
         id: riggedFigure1
         effect: skinnedPbrEffect
         source: "qrc:/assets/gltf/2.0/Robot/robot.gltf"
-        baseColor: "orange"
+        baseColor: TextureLoader { source: "file:///home/sean_harmer/ownCloud/mannequin/textures/robot_basecolor.png" } //"orange"
+        metalness: TextureLoader { source: "file:///home/sean_harmer/ownCloud/mannequin/textures/robot_metallic.png" }
+        roughness: TextureLoader { source: "file:///home/sean_harmer/ownCloud/mannequin/textures/robot_roughness.png" }
+        normal: TextureLoader { source: "file:///home/sean_harmer/ownCloud/mannequin/textures/robot_normal.png" }
+        ambientOcclusion: TextureLoader { source: "file:///home/sean_harmer/ownCloud/mannequin/textures/mannequin_ambient_occlusion.png" }
         transform.scale: 0.035;
         transform.translation: Qt.vector3d(0.0, 3.33, 0.0);
 

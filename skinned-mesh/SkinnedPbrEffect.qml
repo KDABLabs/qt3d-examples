@@ -4,11 +4,14 @@ import Qt3D.Input 2.0
 import Qt3D.Extras 2.10
 
 Effect {
-    id: skinnedPbrEffect
+    id: root
+
     parameters: [
         Parameter { name: "baseColor"; value: "red" },
         Parameter { name: "metalness"; value: 0.1 },
-        Parameter { name: "roughness"; value: 0.2 }
+        Parameter { name: "roughness"; value: 0.2 },
+        Parameter { name: "normal"; value: Qt.rgba(0.5, 0.5, 1.0, 1.0) },
+        Parameter { name: "ambientOcclusion"; value: "white" }
     ]
 
     techniques: [
@@ -31,7 +34,7 @@ Effect {
                 ShaderProgramBuilder {
                     shaderProgram: prog
                     fragmentShaderGraph: "qrc:/shaders/graphs/metalrough.frag.json"
-                    enabledLayers: ["baseColor", "metalness", "roughness", "ambientOcclusion", "normal"]
+                    enabledLayers: ["baseColorMap", "metalnessMap", "roughnessMap", "ambientOcclusionMap", "normalMap"]
                 }
             }
         }
