@@ -12,5 +12,10 @@
         <file>assets/gltf/2.0/RiggedSimple/RiggedSimple0.bin</file>
         <file>assets/gltf/2.0/Cube-0/cube.bin</file>
         <file>assets/gltf/2.0/Cube-0/cube.gltf</file>
+        <file>assets/gltf/2.0/Robot/robot.bin</file>
+        <file>assets/gltf/2.0/Robot/robot.gltf</file>
+        <file>assets/gltf/2.0/Robot/walk.json</file>
+        <file>assets/gltf/2.0/Robot/samba.json</file>
+        <file>assets/gltf/2.0/Robot/thriller.json</file>
     </qresource>
 </RCC>

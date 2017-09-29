@@ -65,7 +65,7 @@ DefaultSceneEntity {
     SimpleEntity {
         id: simpleEntity
         transform.translation: Qt.vector3d(-4.0, 0.0, 0.0);
-        source: "qrc:/assets/gltf/2.0/Cube-0/cube.gltf"
+        source: "qrc:/assets/gltf/2.0/Robot/robot.gltf"
         baseColor: "blue"
     }
 
@@ -75,22 +75,24 @@ DefaultSceneEntity {
         repeat: false
         onTriggered: {
             animator1.running = true
+            animator2.running = true
         }
     }
 
     SkinnedEntity {
         id: riggedFigure1
         effect: skinnedPbrEffect
-        source: "qrc:/assets/gltf/2.0/Cube-1/cube.gltf"
+        source: "qrc:/assets/gltf/2.0/Robot/robot.gltf"
         baseColor: "orange"
-        transform.translation: Qt.vector3d(0.0, 0.0, 0.0);
+        transform.scale: 0.035;
+        transform.translation: Qt.vector3d(0.0, 3.33, 0.0);
 
         components: [
             BlendedClipAnimator {
                 id: animator1
                 loops: 100
                 blendTree: ClipBlendValue {
-                    clip: AnimationClipLoader { source: "qrc:/assets/gltf/2.0/Cube-1/out.json" }
+                    clip: AnimationClipLoader { source: "qrc:/assets/gltf/2.0/Robot/walk.json" }
                 }
                 channelMapper: ChannelMapper {
                     mappings: [
@@ -106,16 +108,17 @@ DefaultSceneEntity {
     SkinnedEntity {
         id: riggedFigure2
         effect: skinnedPbrEffect
-        source: "qrc:/assets/gltf/2.0/Cube-2/cube.gltf"
+        source: "qrc:/assets/gltf/2.0/Robot/robot.gltf"
         baseColor: "green"
-        transform.translation: Qt.vector3d(5.0, 0.0, 0.0);
+        transform.scale: 0.035;
+        transform.translation: Qt.vector3d(5.0, 3.33, 0.0);
 
         components: [
             BlendedClipAnimator {
                 id: animator2
                 loops: 100
                 blendTree: ClipBlendValue {
-                    clip: AnimationClipLoader { source: "qrc:/assets/gltf/2.0/Cube-2/out.json" }
+                    clip: AnimationClipLoader { source: "qrc:/assets/gltf/2.0/Robot/samba.json" }
                 }
                 channelMapper: ChannelMapper {
                     mappings: [
