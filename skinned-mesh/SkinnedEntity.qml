@@ -6,7 +6,7 @@ import Qt3D.Extras 2.10
 Entity {
     id: root
 
-    property Effect effect: skinnedPbrEffect
+    property Effect effect: texturedSkinnedPbrEffect
     property url source: ""
     property alias createJointsEnabled: skeleton.createJointsEnabled
     property alias transform: transform
@@ -49,11 +49,11 @@ Entity {
             effect: root.effect
 
             parameters: [
-                Parameter { name: "baseColorMap"; value: material.baseColor },
-                Parameter { name: "metalnessMap"; value: material.metalness },
-                Parameter { name: "roughnessMap"; value: material.roughness },
-                Parameter { name: "normalMap"; value: material.normal },
-                Parameter { name: "ambientOcclusionMap"; value: material.ambientOcclusion }
+                Parameter { name: effect.useTextures ? "baseColorMap" : "baseColor"; value: material.baseColor },
+                Parameter { name: effect.useTextures ? "metalnessMap" : "metalness"; value: material.metalness },
+                Parameter { name: effect.useTextures ? "roughnessMap": "roughness"; value: material.roughness },
+                Parameter { name: effect.useTextures ? "normalMap" : "normal"; value: material.normal },
+                Parameter { name: effect.useTextures ? "ambientOcclusionMap" : "ambientOcclusion"; value: material.ambientOcclusion }
             ]
         }
     ]

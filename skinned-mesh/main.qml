@@ -59,6 +59,11 @@ DefaultSceneEntity {
     id: scene
 
     SkinnedPbrEffect {
+        id: texturedSkinnedPbrEffect
+        useTextures: true
+    }
+
+    SkinnedPbrEffect {
         id: skinnedPbrEffect
     }
 
@@ -81,9 +86,10 @@ DefaultSceneEntity {
 
     SkinnedEntity {
         id: riggedFigure1
-        effect: skinnedPbrEffect
+        effect: texturedSkinnedPbrEffect
         source: "qrc:/assets/gltf/2.0/Robot/robot.gltf"
-        baseColor: TextureLoader { source: "file:///home/sean_harmer/ownCloud/mannequin/textures/robot_basecolor.png" } //"orange"
+        //baseColor: "orange"
+        baseColor: TextureLoader { source: "file:///home/sean_harmer/ownCloud/mannequin/textures/robot_basecolor.png" }
         metalness: TextureLoader { source: "file:///home/sean_harmer/ownCloud/mannequin/textures/robot_metallic.png" }
         roughness: TextureLoader { source: "file:///home/sean_harmer/ownCloud/mannequin/textures/robot_roughness.png" }
         normal: TextureLoader { source: "file:///home/sean_harmer/ownCloud/mannequin/textures/robot_normal.png" }
@@ -96,7 +102,7 @@ DefaultSceneEntity {
                 id: animator1
                 loops: 100
                 blendTree: ClipBlendValue {
-                    clip: AnimationClipLoader { source: "qrc:/assets/gltf/2.0/Robot/walk.json" }
+                    clip: AnimationClipLoader { source: "qrc:/assets/gltf/2.0/Robot/thriller.json" }
                 }
                 channelMapper: ChannelMapper {
                     mappings: [

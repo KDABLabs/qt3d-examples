@@ -6,6 +6,8 @@ import Qt3D.Extras 2.10
 Effect {
     id: root
 
+    property bool useTextures: false
+
     parameters: [
         Parameter { name: "baseColor"; value: "red" },
         Parameter { name: "metalness"; value: 0.1 },
@@ -34,7 +36,9 @@ Effect {
                 ShaderProgramBuilder {
                     shaderProgram: prog
                     fragmentShaderGraph: "qrc:/shaders/graphs/metalrough.frag.json"
-                    enabledLayers: ["baseColorMap", "metalnessMap", "roughnessMap", "ambientOcclusionMap", "normalMap"]
+                    enabledLayers: root.useTextures
+                                   ? ["baseColorMap", "metalnessMap", "roughnessMap", "ambientOcclusionMap", "normalMap"]
+                                   : ["baseColor", "metalness", "roughness", "ambientOcclusion", "normal"]
                 }
             }
         }
