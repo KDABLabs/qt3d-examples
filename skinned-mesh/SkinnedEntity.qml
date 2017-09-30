@@ -41,6 +41,7 @@ Entity {
             id: material
 
             property var baseColor: "red"
+            onBaseColorChanged: console.log(baseColor)
             property var metalness: 0.1
             property var roughness: 0.2
             property var normal: Qt.rgba(0.5, 0.5, 1.0, 1.0); // Neutral normal map color

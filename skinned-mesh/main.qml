@@ -67,19 +67,24 @@ DefaultSceneEntity {
         id: skinnedPbrEffect
     }
 
-    SimpleEntity {
-        id: simpleEntity
-        transform.translation: Qt.vector3d(-4.0, -3.33, 0.0);
-        source: "qrc:/assets/gltf/2.0/Robot/robot.gltf"
-        baseColor: "blue"
+    AnimationClipLoader {
+        id: thrillerClip
+        source: "qrc:/assets/gltf/2.0/Robot/thriller.json"
     }
+
+//    SimpleEntity {
+//        id: simpleEntity
+//        transform.translation: Qt.vector3d(-4.0, -3.33, 0.0);
+//        source: "qrc:/assets/gltf/2.0/Robot/robot.gltf"
+//        baseColor: "blue"
+//    }
 
     AnimatedEntity {
         id: riggedFigure1
         transform.scale: 0.035
 
         source: "qrc:/assets/gltf/2.0/Robot/robot.gltf"
-        animationSource: "qrc:/assets/gltf/2.0/Robot/thriller.json"
+        clip: thrillerClip
 
         effect: texturedSkinnedPbrEffect
         baseColor: TextureLoader {
@@ -93,15 +98,55 @@ DefaultSceneEntity {
         ambientOcclusion: TextureLoader { mirrored: false; source: "qrc:/assets/gltf/2.0/Robot/robot_occlusion.png" }
     }
 
-    AnimatedEntity {
-        id: riggedFigure2
-        transform.scale: 0.035;
-        transform.translation: Qt.vector3d(5.0, 0, 0.0);
+//    AnimatedEntity {
+//        id: riggedFigure2
+//        transform.scale: 0.035;
+//        transform.translation: Qt.vector3d(5.0, 0, 0.0);
 
-        source: "qrc:/assets/gltf/2.0/Robot/robot.gltf"
-        animationSource: "qrc:/assets/gltf/2.0/Robot/samba.json"
+//        source: "qrc:/assets/gltf/2.0/Robot/robot.gltf"
+//        animationSource: "qrc:/assets/gltf/2.0/Robot/samba.json"
 
-        effect: skinnedPbrEffect
-        baseColor: "green"
+//        effect: skinnedPbrEffect
+//        baseColor: "green"
+//    }
+
+    NodeInstantiator {
+        id: instantiator
+        property var colors: [
+            Qt.rgba(0, 1, 0, 1),    // green
+            Qt.rgba(1, 0.6, 0, 1),  // orange
+            Qt.rgba(1, 0, 0, 1),    // red
+            Qt.rgba(0, 0, 1, 1),    // blue
+        ]
+        model: ListModel {
+            ListElement { color: 0; x: -3; z: -2 }
+            ListElement { color: 0; x:  3; z: -2 }
+
+            ListElement { color: 1; x: -6; z: -4 }
+            ListElement { color: 1; x:  0; z: -4 }
+            ListElement { color: 1; x:  6; z: -4 }
+
+            ListElement { color: 2; x: -9; z: -6 }
+            ListElement { color: 2; x: -3; z: -6 }
+            ListElement { color: 2; x:  3; z: -6 }
+            ListElement { color: 2; x:  9; z: -6 }
+
+            ListElement { color: 3; x: -12; z: -8 }
+            ListElement { color: 3; x: -6; z: -8 }
+            ListElement { color: 3; x:  0; z: -8 }
+            ListElement { color: 3; x:  6; z: -8 }
+            ListElement { color: 3; x:  12; z: -8 }
+        }
+
+        delegate: AnimatedEntity {
+            transform.scale: 0.035;
+            transform.translation: Qt.vector3d(model.x, 0, model.z)
+
+            source: "qrc:/assets/gltf/2.0/Robot/robot.gltf"
+            clip: thrillerClip
+
+            effect: skinnedPbrEffect
+            baseColor: instantiator.colors[model.color]
+        }
     }
 }

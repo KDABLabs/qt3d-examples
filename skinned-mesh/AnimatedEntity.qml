@@ -7,7 +7,7 @@ import QtQuick 2.9
 
 SkinnedEntity {
     id: riggedFigure1
-    property alias animationSource: clipLoader.source
+    property alias clip: clipValue.clip
 
     components: [
         BlendedClipAnimator {
@@ -15,7 +15,7 @@ SkinnedEntity {
             loops: Animator.Infinite
             running: true
             blendTree: ClipBlendValue {
-                clip: AnimationClipLoader { id: clipLoader }
+                id: clipValue
             }
             channelMapper: ChannelMapper {
                 mappings: [
