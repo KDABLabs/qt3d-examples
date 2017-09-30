@@ -10,12 +10,12 @@ OTHER_FILES += \
     main.qml \
     DefaultSceneEntity.qml \
     SkinnedEntity.qml \
-    SkinnedPbrEffect.qml
+    SkinnedPbrEffect.qml \
+    SimpleEntity.qml \
+    AnimatedEntity.qml \
+    skinnedPbr.vert
 
 RESOURCES += \
     skinned-mesh.qrc \
     ../resources/cedar-bridge.qrc \
     ../resources/gltf.qrc
-
-DISTFILES += \
-    skinnedPbr.vert

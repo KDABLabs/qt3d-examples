@@ -61,6 +61,7 @@ Entity {
             activeFrameGraph: ForwardRenderer {
                 camera: mainCamera
                 frustumCulling: false
+                clearColor: "black"
             }
         },
         // Event Source will be set by the Qt3DQuickWindow
@@ -69,8 +70,8 @@ Entity {
 
     Camera {
         id: mainCamera
-        position: Qt.vector3d(1.5, 0.8, 10)
-        viewCenter: Qt.vector3d(1.5, 0.8, 0)
+        position: Qt.vector3d(1.5, 2.0, 10)
+        viewCenter: Qt.vector3d(1.5, 1.0, 0)
         fieldOfView: 60
     }
 

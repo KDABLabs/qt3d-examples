@@ -69,26 +69,19 @@ DefaultSceneEntity {
 
     SimpleEntity {
         id: simpleEntity
-        transform.translation: Qt.vector3d(-4.0, 0.0, 0.0);
+        transform.translation: Qt.vector3d(-4.0, -3.33, 0.0);
         source: "qrc:/assets/gltf/2.0/Robot/robot.gltf"
         baseColor: "blue"
     }
 
-    Timer {
-        interval: 2000
-        running: true
-        repeat: false
-        onTriggered: {
-            animator1.running = true
-            animator2.running = true
-        }
-    }
-
-    SkinnedEntity {
+    AnimatedEntity {
         id: riggedFigure1
-        effect: texturedSkinnedPbrEffect
+        transform.scale: 0.035
+
         source: "qrc:/assets/gltf/2.0/Robot/robot.gltf"
-        //baseColor: "orange"
+        animationSource: "qrc:/assets/gltf/2.0/Robot/thriller.json"
+
+        effect: texturedSkinnedPbrEffect
         baseColor: TextureLoader {
             source: "qrc:/assets/gltf/2.0/Robot/robot_basecolor.png"
             format: Texture.SRGB8_Alpha8
@@ -98,50 +91,17 @@ DefaultSceneEntity {
         roughness: TextureLoader { mirrored: false; source: "qrc:/assets/gltf/2.0/Robot/robot_roughness.png" }
         normal: TextureLoader { mirrored: false; source: "qrc:/assets/gltf/2.0/Robot/robot_normal.png" }
         ambientOcclusion: TextureLoader { mirrored: false; source: "qrc:/assets/gltf/2.0/Robot/robot_occlusion.png" }
-        transform.scale: 0.035;
-        transform.translation: Qt.vector3d(0.0, 3.33, 0.0);
-
-        components: [
-            BlendedClipAnimator {
-                id: animator1
-                loops: 100
-                blendTree: ClipBlendValue {
-                    clip: AnimationClipLoader { source: "qrc:/assets/gltf/2.0/Robot/thriller.json" }
-                }
-                channelMapper: ChannelMapper {
-                    mappings: [
-                        SkeletonMapping { skeleton: riggedFigure1.skeleton }
-                    ]
-                }
-
-                onRunningChanged: console.log("running = " + running)
-            }
-        ]
     }
 
-    SkinnedEntity {
+    AnimatedEntity {
         id: riggedFigure2
-        effect: skinnedPbrEffect
-        source: "qrc:/assets/gltf/2.0/Robot/robot.gltf"
-        baseColor: "green"
         transform.scale: 0.035;
-        transform.translation: Qt.vector3d(5.0, 3.33, 0.0);
+        transform.translation: Qt.vector3d(5.0, 0, 0.0);
 
-        components: [
-            BlendedClipAnimator {
-                id: animator2
-                loops: 100
-                blendTree: ClipBlendValue {
-                    clip: AnimationClipLoader { source: "qrc:/assets/gltf/2.0/Robot/samba.json" }
-                }
-                channelMapper: ChannelMapper {
-                    mappings: [
-                        SkeletonMapping { skeleton: riggedFigure2.skeleton }
-                    ]
-                }
+        source: "qrc:/assets/gltf/2.0/Robot/robot.gltf"
+        animationSource: "qrc:/assets/gltf/2.0/Robot/samba.json"
 
-                onRunningChanged: console.log("running = " + running)
-            }
-        ]
+        effect: skinnedPbrEffect
+        baseColor: "green"
     }
 }

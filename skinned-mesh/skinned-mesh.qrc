@@ -7,5 +7,6 @@
         <file>SkinnedPbrEffect.qml</file>
         <file>jump.json</file>
         <file>SimpleEntity.qml</file>
+        <file>AnimatedEntity.qml</file>
     </qresource>
 </RCC>
