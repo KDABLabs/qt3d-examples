@@ -1,11 +1,14 @@
 {
  "animations": [
   {
+   "animationName": "Jump",
    "channels": [
     {
+     "channelName": "Location",
      "jointIndex": 0,
      "channelComponents": [
       {
+       "channelComponentName": "Location X",
        "keyFrames": [
         {
          "coords": [
@@ -187,10 +190,10 @@
           1.0
          ]
         }
-       ],
-       "channelComponentName": "Location X"
+       ]
       },
       {
+       "channelComponentName": "Location Y",
        "keyFrames": [
         {
          "coords": [
@@ -372,10 +375,10 @@
           0.3
          ]
         }
-       ],
-       "channelComponentName": "Location Y"
+       ]
       },
       {
+       "channelComponentName": "LocationZ",
        "keyFrames": [
         {
          "coords": [
@@ -557,201 +560,16 @@
           -0.6
          ]
         }
-       ],
-       "channelComponentName": "LocationZ"
+       ]
       }
-     ],
-     "channelName": "Location"
+     ]
     },
     {
+     "channelName": "Rotation",
      "jointIndex": 0,
      "channelComponents": [
       {
-       "keyFrames": [
-        {
-         "coords": [
-          0.0,
-          1.0
-         ]
-        },
-        {
-         "coords": [
-          0.04167,
-          1.0
-         ]
-        },
-        {
-         "coords": [
-          0.08333,
-          1.0
-         ]
-        },
-        {
-         "coords": [
-          0.125,
-          1.0
-         ]
-        },
-        {
-         "coords": [
-          0.16667,
-          1.0
-         ]
-        },
-        {
-         "coords": [
-          0.20833,
-          1.0
-         ]
-        },
-        {
-         "coords": [
-          0.25,
-          1.0
-         ]
-        },
-        {
-         "coords": [
-          0.29167,
-          1.0
-         ]
-        },
-        {
-         "coords": [
-          0.33333,
-          1.0
-         ]
-        },
-        {
-         "coords": [
-          0.375,
-          1.0
-         ]
-        },
-        {
-         "coords": [
-          0.41667,
-          0.99997
-         ]
-        },
-        {
-         "coords": [
-          0.45833,
-          0.99957
-         ]
-        },
-        {
-         "coords": [
-          0.5,
-          0.99786
-         ]
-        },
-        {
-         "coords": [
-          0.54167,
-          0.99362
-         ]
-        },
-        {
-         "coords": [
-          0.58333,
-          0.98605
-         ]
-        },
-        {
-         "coords": [
-          0.625,
-          0.97559
-         ]
-        },
-        {
-         "coords": [
-          0.66667,
-          0.96403
-         ]
-        },
-        {
-         "coords": [
-          0.70833,
-          0.95382
-         ]
-        },
-        {
-         "coords": [
-          0.75,
-          0.94697
-         ]
-        },
-        {
-         "coords": [
-          0.79167,
-          0.9446
-         ]
-        },
-        {
-         "coords": [
-          0.83333,
-          0.9446
-         ]
-        },
-        {
-         "coords": [
-          0.875,
-          0.9446
-         ]
-        },
-        {
-         "coords": [
-          0.91667,
-          0.9446
-         ]
-        },
-        {
-         "coords": [
-          0.95833,
-          0.9446
-         ]
-        },
-        {
-         "coords": [
-          1.0,
-          0.9446
-         ]
-        },
-        {
-         "coords": [
-          1.04167,
-          0.9446
-         ]
-        },
-        {
-         "coords": [
-          1.08333,
-          0.9446
-         ]
-        },
-        {
-         "coords": [
-          1.125,
-          0.9446
-         ]
-        },
-        {
-         "coords": [
-          1.16667,
-          0.9446
-         ]
-        },
-        {
-         "coords": [
-          1.20833,
-          0.9446
-         ]
-        }
-       ],
-       "channelComponentName": "Rotation X"
-      },
-      {
+       "channelComponentName": "Rotation X",
        "keyFrames": [
         {
          "coords": [
@@ -933,10 +751,10 @@
           -0.28014
          ]
         }
-       ],
-       "channelComponentName": "Rotation Y"
+       ]
       },
       {
+       "channelComponentName": "Rotation Y",
        "keyFrames": [
         {
          "coords": [
@@ -1118,10 +936,10 @@
           0.12092
          ]
         }
-       ],
-       "channelComponentName": "Rotation Z"
+       ]
       },
       {
+       "channelComponentName": "Rotation Z",
        "keyFrames": [
         {
          "coords": [
@@ -1303,16 +1121,201 @@
           0.12092
          ]
         }
-       ],
-       "channelComponentName": "Rotation W"
+       ]
+      },
+      {
+       "channelComponentName": "Rotation W",
+       "keyFrames": [
+        {
+         "coords": [
+          0.0,
+          1.0
+         ]
+        },
+        {
+         "coords": [
+          0.04167,
+          1.0
+         ]
+        },
+        {
+         "coords": [
+          0.08333,
+          1.0
+         ]
+        },
+        {
+         "coords": [
+          0.125,
+          1.0
+         ]
+        },
+        {
+         "coords": [
+          0.16667,
+          1.0
+         ]
+        },
+        {
+         "coords": [
+          0.20833,
+          1.0
+         ]
+        },
+        {
+         "coords": [
+          0.25,
+          1.0
+         ]
+        },
+        {
+         "coords": [
+          0.29167,
+          1.0
+         ]
+        },
+        {
+         "coords": [
+          0.33333,
+          1.0
+         ]
+        },
+        {
+         "coords": [
+          0.375,
+          1.0
+         ]
+        },
+        {
+         "coords": [
+          0.41667,
+          0.99997
+         ]
+        },
+        {
+         "coords": [
+          0.45833,
+          0.99957
+         ]
+        },
+        {
+         "coords": [
+          0.5,
+          0.99786
+         ]
+        },
+        {
+         "coords": [
+          0.54167,
+          0.99362
+         ]
+        },
+        {
+         "coords": [
+          0.58333,
+          0.98605
+         ]
+        },
+        {
+         "coords": [
+          0.625,
+          0.97559
+         ]
+        },
+        {
+         "coords": [
+          0.66667,
+          0.96403
+         ]
+        },
+        {
+         "coords": [
+          0.70833,
+          0.95382
+         ]
+        },
+        {
+         "coords": [
+          0.75,
+          0.94697
+         ]
+        },
+        {
+         "coords": [
+          0.79167,
+          0.9446
+         ]
+        },
+        {
+         "coords": [
+          0.83333,
+          0.9446
+         ]
+        },
+        {
+         "coords": [
+          0.875,
+          0.9446
+         ]
+        },
+        {
+         "coords": [
+          0.91667,
+          0.9446
+         ]
+        },
+        {
+         "coords": [
+          0.95833,
+          0.9446
+         ]
+        },
+        {
+         "coords": [
+          1.0,
+          0.9446
+         ]
+        },
+        {
+         "coords": [
+          1.04167,
+          0.9446
+         ]
+        },
+        {
+         "coords": [
+          1.08333,
+          0.9446
+         ]
+        },
+        {
+         "coords": [
+          1.125,
+          0.9446
+         ]
+        },
+        {
+         "coords": [
+          1.16667,
+          0.9446
+         ]
+        },
+        {
+         "coords": [
+          1.20833,
+          0.9446
+         ]
+        }
+       ]
       }
-     ],
-     "channelName": "Rotation"
+     ]
     },
     {
+     "channelName": "Scale",
      "jointIndex": 0,
      "channelComponents": [
       {
+       "channelComponentName": "Scale X",
        "keyFrames": [
         {
          "coords": [
@@ -1494,10 +1497,10 @@
           1.0
          ]
         }
-       ],
-       "channelComponentName": "Scale X"
+       ]
       },
       {
+       "channelComponentName": "Scale Y",
        "keyFrames": [
         {
          "coords": [
@@ -1679,10 +1682,10 @@
           1.0
          ]
         }
-       ],
-       "channelComponentName": "Scale Y"
+       ]
       },
       {
+       "channelComponentName": "Scale Z",
        "keyFrames": [
         {
          "coords": [
@@ -1864,16 +1867,16 @@
           1.0
          ]
         }
-       ],
-       "channelComponentName": "Scale Z"
+       ]
       }
-     ],
-     "channelName": "Scale"
+     ]
     },
     {
+     "channelName": "Location",
      "jointIndex": 1,
      "channelComponents": [
       {
+       "channelComponentName": "Location X",
        "keyFrames": [
         {
          "coords": [
@@ -2055,10 +2058,10 @@
           0.0
          ]
         }
-       ],
-       "channelComponentName": "Location X"
+       ]
       },
       {
+       "channelComponentName": "Location Y",
        "keyFrames": [
         {
          "coords": [
@@ -2240,10 +2243,10 @@
           1.24774
          ]
         }
-       ],
-       "channelComponentName": "Location Y"
+       ]
       },
       {
+       "channelComponentName": "LocationZ",
        "keyFrames": [
         {
          "coords": [
@@ -2425,201 +2428,16 @@
           0.0
          ]
         }
-       ],
-       "channelComponentName": "LocationZ"
+       ]
       }
-     ],
-     "channelName": "Location"
+     ]
     },
     {
+     "channelName": "Rotation",
      "jointIndex": 1,
      "channelComponents": [
       {
-       "keyFrames": [
-        {
-         "coords": [
-          0.0,
-          0.03262
-         ]
-        },
-        {
-         "coords": [
-          0.04167,
-          0.03263
-         ]
-        },
-        {
-         "coords": [
-          0.08333,
-          0.03265
-         ]
-        },
-        {
-         "coords": [
-          0.125,
-          0.03262
-         ]
-        },
-        {
-         "coords": [
-          0.16667,
-          0.03244
-         ]
-        },
-        {
-         "coords": [
-          0.20833,
-          0.03209
-         ]
-        },
-        {
-         "coords": [
-          0.25,
-          0.03162
-         ]
-        },
-        {
-         "coords": [
-          0.29167,
-          0.03116
-         ]
-        },
-        {
-         "coords": [
-          0.33333,
-          0.03084
-         ]
-        },
-        {
-         "coords": [
-          0.375,
-          0.03072
-         ]
-        },
-        {
-         "coords": [
-          0.41667,
-          0.03072
-         ]
-        },
-        {
-         "coords": [
-          0.45833,
-          0.03072
-         ]
-        },
-        {
-         "coords": [
-          0.5,
-          0.03072
-         ]
-        },
-        {
-         "coords": [
-          0.54167,
-          0.03072
-         ]
-        },
-        {
-         "coords": [
-          0.58333,
-          0.03072
-         ]
-        },
-        {
-         "coords": [
-          0.625,
-          0.03072
-         ]
-        },
-        {
-         "coords": [
-          0.66667,
-          0.03072
-         ]
-        },
-        {
-         "coords": [
-          0.70833,
-          0.03072
-         ]
-        },
-        {
-         "coords": [
-          0.75,
-          0.03072
-         ]
-        },
-        {
-         "coords": [
-          0.79167,
-          0.03072
-         ]
-        },
-        {
-         "coords": [
-          0.83333,
-          0.03072
-         ]
-        },
-        {
-         "coords": [
-          0.875,
-          0.03072
-         ]
-        },
-        {
-         "coords": [
-          0.91667,
-          0.03072
-         ]
-        },
-        {
-         "coords": [
-          0.95833,
-          0.03072
-         ]
-        },
-        {
-         "coords": [
-          1.0,
-          0.03072
-         ]
-        },
-        {
-         "coords": [
-          1.04167,
-          0.03072
-         ]
-        },
-        {
-         "coords": [
-          1.08333,
-          0.03072
-         ]
-        },
-        {
-         "coords": [
-          1.125,
-          0.03072
-         ]
-        },
-        {
-         "coords": [
-          1.16667,
-          0.03072
-         ]
-        },
-        {
-         "coords": [
-          1.20833,
-          0.03072
-         ]
-        }
-       ],
-       "channelComponentName": "Rotation X"
-      },
-      {
+       "channelComponentName": "Rotation X",
        "keyFrames": [
         {
          "coords": [
@@ -2801,10 +2619,10 @@
           0.01106
          ]
         }
-       ],
-       "channelComponentName": "Rotation Y"
+       ]
       },
       {
+       "channelComponentName": "Rotation Y",
        "keyFrames": [
         {
          "coords": [
@@ -2986,10 +2804,10 @@
           0.92
          ]
         }
-       ],
-       "channelComponentName": "Rotation Z"
+       ]
       },
       {
+       "channelComponentName": "Rotation Z",
        "keyFrames": [
         {
          "coords": [
@@ -3171,16 +2989,201 @@
           0.39056
          ]
         }
-       ],
-       "channelComponentName": "Rotation W"
+       ]
+      },
+      {
+       "channelComponentName": "Rotation W",
+       "keyFrames": [
+        {
+         "coords": [
+          0.0,
+          0.03262
+         ]
+        },
+        {
+         "coords": [
+          0.04167,
+          0.03263
+         ]
+        },
+        {
+         "coords": [
+          0.08333,
+          0.03265
+         ]
+        },
+        {
+         "coords": [
+          0.125,
+          0.03262
+         ]
+        },
+        {
+         "coords": [
+          0.16667,
+          0.03244
+         ]
+        },
+        {
+         "coords": [
+          0.20833,
+          0.03209
+         ]
+        },
+        {
+         "coords": [
+          0.25,
+          0.03162
+         ]
+        },
+        {
+         "coords": [
+          0.29167,
+          0.03116
+         ]
+        },
+        {
+         "coords": [
+          0.33333,
+          0.03084
+         ]
+        },
+        {
+         "coords": [
+          0.375,
+          0.03072
+         ]
+        },
+        {
+         "coords": [
+          0.41667,
+          0.03072
+         ]
+        },
+        {
+         "coords": [
+          0.45833,
+          0.03072
+         ]
+        },
+        {
+         "coords": [
+          0.5,
+          0.03072
+         ]
+        },
+        {
+         "coords": [
+          0.54167,
+          0.03072
+         ]
+        },
+        {
+         "coords": [
+          0.58333,
+          0.03072
+         ]
+        },
+        {
+         "coords": [
+          0.625,
+          0.03072
+         ]
+        },
+        {
+         "coords": [
+          0.66667,
+          0.03072
+         ]
+        },
+        {
+         "coords": [
+          0.70833,
+          0.03072
+         ]
+        },
+        {
+         "coords": [
+          0.75,
+          0.03072
+         ]
+        },
+        {
+         "coords": [
+          0.79167,
+          0.03072
+         ]
+        },
+        {
+         "coords": [
+          0.83333,
+          0.03072
+         ]
+        },
+        {
+         "coords": [
+          0.875,
+          0.03072
+         ]
+        },
+        {
+         "coords": [
+          0.91667,
+          0.03072
+         ]
+        },
+        {
+         "coords": [
+          0.95833,
+          0.03072
+         ]
+        },
+        {
+         "coords": [
+          1.0,
+          0.03072
+         ]
+        },
+        {
+         "coords": [
+          1.04167,
+          0.03072
+         ]
+        },
+        {
+         "coords": [
+          1.08333,
+          0.03072
+         ]
+        },
+        {
+         "coords": [
+          1.125,
+          0.03072
+         ]
+        },
+        {
+         "coords": [
+          1.16667,
+          0.03072
+         ]
+        },
+        {
+         "coords": [
+          1.20833,
+          0.03072
+         ]
+        }
+       ]
       }
-     ],
-     "channelName": "Rotation"
+     ]
     },
     {
+     "channelName": "Scale",
      "jointIndex": 1,
      "channelComponents": [
       {
+       "channelComponentName": "Scale X",
        "keyFrames": [
         {
          "coords": [
@@ -3362,10 +3365,10 @@
           1.0
          ]
         }
-       ],
-       "channelComponentName": "Scale X"
+       ]
       },
       {
+       "channelComponentName": "Scale Y",
        "keyFrames": [
         {
          "coords": [
@@ -3547,10 +3550,10 @@
           1.0
          ]
         }
-       ],
-       "channelComponentName": "Scale Y"
+       ]
       },
       {
+       "channelComponentName": "Scale Z",
        "keyFrames": [
         {
          "coords": [
@@ -3732,14 +3735,11 @@
           1.0
          ]
         }
-       ],
-       "channelComponentName": "Scale Z"
+       ]
       }
-     ],
-     "channelName": "Scale"
+     ]
     }
-   ],
-   "animationName": "Jump"
+   ]
   }
  ]
 }

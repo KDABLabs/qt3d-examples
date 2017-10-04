@@ -7,22 +7,38 @@ import QtQuick 2.9
 
 SkinnedEntity {
     id: riggedFigure1
-    property alias clip: clipValue.clip
+    property alias clip: animator1.clip
+
+    Timer {
+        interval: 2000
+        repeat: false
+        running: true
+        onTriggered: animator1.running = true
+    }
 
     components: [
-        BlendedClipAnimator {
+//        BlendedClipAnimator {
+//            id: animator1
+//            loops: Animator.Infinite
+//            running: false
+//            blendTree: ClipBlendValue {
+//                id: clipValue
+//            }
+//            channelMapper: ChannelMapper {
+//                mappings: [
+//                    SkeletonMapping { skeleton: riggedFigure1.skeleton }
+//                ]
+//            }
+
+//            onRunningChanged: console.log("running = " + running)
+//        }
+
+        ClipAnimator {
             id: animator1
             loops: Animator.Infinite
-            running: true
-            blendTree: ClipBlendValue {
-                id: clipValue
-            }
             channelMapper: ChannelMapper {
-                mappings: [
-                    SkeletonMapping { skeleton: riggedFigure1.skeleton }
-                ]
+                mappings: [ SkeletonMapping { skeleton: riggedFigure1.skeleton } ]
             }
-
             onRunningChanged: console.log("running = " + running)
         }
     ]

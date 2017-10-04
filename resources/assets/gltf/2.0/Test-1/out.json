@@ -1471,7 +1471,7 @@
          ]
         }
        ],
-       "channelComponentName": "Rotation X"
+       "channelComponentName": "Rotation W"
       },
       {
        "keyFrames": [
@@ -2566,7 +2566,7 @@
          ]
         }
        ],
-       "channelComponentName": "Rotation W"
+       "channelComponentName": "Rotation X"
       }
      ]
     },

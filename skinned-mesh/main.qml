@@ -69,19 +69,13 @@ DefaultSceneEntity {
 
     AnimationClipLoader {
         id: thrillerClip
-        source: "qrc:/assets/gltf/2.0/Robot/thriller.json"
+        source: "qrc:/assets/gltf/2.0/Robot/robot.gltf"
     }
-
-//    SimpleEntity {
-//        id: simpleEntity
-//        transform.translation: Qt.vector3d(-4.0, -3.33, 0.0);
-//        source: "qrc:/assets/gltf/2.0/Robot/robot.gltf"
-//        baseColor: "blue"
-//    }
 
     AnimatedEntity {
         id: riggedFigure1
         transform.scale: 0.035
+        transform.rotationX: 90
 
         source: "qrc:/assets/gltf/2.0/Robot/robot.gltf"
         clip: thrillerClip
@@ -97,18 +91,6 @@ DefaultSceneEntity {
         normal: TextureLoader { mirrored: false; source: "qrc:/assets/gltf/2.0/Robot/robot_normal.png" }
         ambientOcclusion: TextureLoader { mirrored: false; source: "qrc:/assets/gltf/2.0/Robot/robot_occlusion.png" }
     }
-
-//    AnimatedEntity {
-//        id: riggedFigure2
-//        transform.scale: 0.035;
-//        transform.translation: Qt.vector3d(5.0, 0, 0.0);
-
-//        source: "qrc:/assets/gltf/2.0/Robot/robot.gltf"
-//        animationSource: "qrc:/assets/gltf/2.0/Robot/samba.json"
-
-//        effect: skinnedPbrEffect
-//        baseColor: "green"
-//    }
 
     NodeInstantiator {
         id: instantiator
@@ -140,6 +122,7 @@ DefaultSceneEntity {
 
         delegate: AnimatedEntity {
             transform.scale: 0.035;
+            transform.rotationX: 90
             transform.translation: Qt.vector3d(model.x, 0, model.z)
 
             source: "qrc:/assets/gltf/2.0/Robot/robot.gltf"
