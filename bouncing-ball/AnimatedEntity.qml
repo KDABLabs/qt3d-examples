@@ -2,6 +2,7 @@ import Qt3D.Core 2.10
 import Qt3D.Render 2.10
 import Qt3D.Extras 2.10
 import Qt3D.Animation 2.10
+import QtQuick 2.9
 
 Entity {
     id: animatedEntity
@@ -20,12 +21,13 @@ Entity {
         },
         MetalRoughMaterial {
             id: material
+            metalness: 0
+            roughness: 0.9
         },
-
         ClipAnimator {
             id: animator
             running: true
-            loops: 100
+            loops: Animator.Infinite
             clip: AnimationClipLoader { source: animatedEntity.clipSource }
             channelMapper: ChannelMapper {
                 mappings: [

@@ -76,6 +76,4 @@ DefaultSceneEntity {
         clipSource: "qrc:/assets/gltf/2.0/BouncingBall/throw.json"
         baseColor: "yellow"
     }
-
-
 }
