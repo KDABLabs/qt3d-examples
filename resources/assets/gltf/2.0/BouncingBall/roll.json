@@ -1,10 +1,14 @@
 {
  "animations": [
   {
+   "animationName": "Jump",
    "channels": [
     {
+     "channelName": "Location",
+     "jointIndex": 0,
      "channelComponents": [
       {
+       "channelComponentName": "Location X",
        "keyFrames": [
         {
          "coords": [
@@ -516,10 +520,10 @@
           -3.90589
          ]
         }
-       ],
-       "channelComponentName": "Location X"
+       ]
       },
       {
+       "channelComponentName": "Location Y",
        "keyFrames": [
         {
          "coords": [
@@ -1031,10 +1035,10 @@
           0.0
          ]
         }
-       ],
-       "channelComponentName": "Location Y"
+       ]
       },
       {
+       "channelComponentName": "LocationZ",
        "keyFrames": [
         {
          "coords": [
@@ -1546,16 +1550,16 @@
           -0.0
          ]
         }
-       ],
-       "channelComponentName": "LocationZ"
+       ]
       }
-     ],
-     "jointIndex": 0,
-     "channelName": "Location"
+     ]
     },
     {
+     "channelName": "Rotation",
+     "jointIndex": 0,
      "channelComponents": [
       {
+       "channelComponentName": "Rotation X",
        "keyFrames": [
         {
          "coords": [
@@ -1722,139 +1726,139 @@
         {
          "coords": [
           1.125,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.16667,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.20833,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.25,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.29167,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.33333,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.375,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.41667,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.45833,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.5,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.54167,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.58333,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.625,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.66667,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.70833,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.75,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.79167,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.83333,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.875,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.91667,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.95833,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           2.0,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           2.04167,
-          0.0
+          -0.0
          ]
         },
         {
@@ -2067,10 +2071,10 @@
           0.0
          ]
         }
-       ],
-       "channelComponentName": "Rotation X"
+       ]
       },
       {
+       "channelComponentName": "Rotation Y",
        "keyFrames": [
         {
          "coords": [
@@ -2237,139 +2241,139 @@
         {
          "coords": [
           1.125,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.16667,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.20833,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.25,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.29167,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.33333,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.375,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.41667,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.45833,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.5,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.54167,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.58333,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.625,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.66667,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.70833,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.75,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.79167,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.83333,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.875,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.91667,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           1.95833,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           2.0,
-          0.0
+          -0.0
          ]
         },
         {
          "coords": [
           2.04167,
-          0.0
+          -0.0
          ]
         },
         {
@@ -2582,10 +2586,10 @@
           0.0
          ]
         }
-       ],
-       "channelComponentName": "Rotation Y"
+       ]
       },
       {
+       "channelComponentName": "Rotation Z",
        "keyFrames": [
         {
          "coords": [
@@ -2752,139 +2756,139 @@
         {
          "coords": [
           1.125,
-          -0.99757
+          0.99757
          ]
         },
         {
          "coords": [
           1.16667,
-          -0.98118
+          0.98118
          ]
         },
         {
          "coords": [
           1.20833,
-          -0.94872
+          0.94872
          ]
         },
         {
          "coords": [
           1.25,
-          -0.89986
+          0.89986
          ]
         },
         {
          "coords": [
           1.29167,
-          -0.83466
+          0.83466
          ]
         },
         {
          "coords": [
           1.33333,
-          -0.75363
+          0.75363
          ]
         },
         {
          "coords": [
           1.375,
-          -0.65775
+          0.65775
          ]
         },
         {
          "coords": [
           1.41667,
-          -0.54846
+          0.54846
          ]
         },
         {
          "coords": [
           1.45833,
-          -0.42765
+          0.42765
          ]
         },
         {
          "coords": [
           1.5,
-          -0.29759
+          0.29759
          ]
         },
         {
          "coords": [
           1.54167,
-          -0.16089
+          0.16089
          ]
         },
         {
          "coords": [
           1.58333,
-          -0.02043
+          0.02043
          ]
         },
         {
          "coords": [
           1.625,
-          0.12077
+          -0.12077
          ]
         },
         {
          "coords": [
           1.66667,
-          0.25963
+          -0.25963
          ]
         },
         {
          "coords": [
           1.70833,
-          0.39311
+          -0.39311
          ]
         },
         {
          "coords": [
           1.75,
-          0.51835
+          -0.51835
          ]
         },
         {
          "coords": [
           1.79167,
-          0.63274
+          -0.63274
          ]
         },
         {
          "coords": [
           1.83333,
-          0.73402
+          -0.73402
          ]
         },
         {
          "coords": [
           1.875,
-          0.82036
+          -0.82036
          ]
         },
         {
          "coords": [
           1.91667,
-          0.89042
+          -0.89042
          ]
         },
         {
          "coords": [
           1.95833,
-          0.94335
+          -0.94335
          ]
         },
         {
          "coords": [
           2.0,
-          0.97884
+          -0.97884
          ]
         },
         {
          "coords": [
           2.04167,
-          0.99708
+          -0.99708
          ]
         },
         {
@@ -3097,10 +3101,10 @@
           -0.01013
          ]
         }
-       ],
-       "channelComponentName": "Rotation Z"
+       ]
       },
       {
+       "channelComponentName": "Rotation W",
        "keyFrames": [
         {
          "coords": [
@@ -3267,139 +3271,139 @@
         {
          "coords": [
           1.125,
-          0.06962
+          -0.06962
          ]
         },
         {
          "coords": [
           1.16667,
-          0.19312
+          -0.19312
          ]
         },
         {
          "coords": [
           1.20833,
-          0.31611
+          -0.31611
          ]
         },
         {
          "coords": [
           1.25,
-          0.43617
+          -0.43617
          ]
         },
         {
          "coords": [
           1.29167,
-          0.55077
+          -0.55077
          ]
         },
         {
          "coords": [
           1.33333,
-          0.6573
+          -0.6573
          ]
         },
         {
          "coords": [
           1.375,
-          0.75324
+          -0.75324
          ]
         },
         {
          "coords": [
           1.41667,
-          0.83618
+          -0.83618
          ]
         },
         {
          "coords": [
           1.45833,
-          0.90395
+          -0.90395
          ]
         },
         {
          "coords": [
           1.5,
-          0.95469
+          -0.95469
          ]
         },
         {
          "coords": [
           1.54167,
-          0.98697
+          -0.98697
          ]
         },
         {
          "coords": [
           1.58333,
-          0.99979
+          -0.99979
          ]
         },
         {
          "coords": [
           1.625,
-          0.99268
+          -0.99268
          ]
         },
         {
          "coords": [
           1.66667,
-          0.96571
+          -0.96571
          ]
         },
         {
          "coords": [
           1.70833,
-          0.91949
+          -0.91949
          ]
         },
         {
          "coords": [
           1.75,
-          0.85517
+          -0.85517
          ]
         },
         {
          "coords": [
           1.79167,
-          0.77437
+          -0.77437
          ]
         },
         {
          "coords": [
           1.83333,
-          0.67913
+          -0.67913
          ]
         },
         {
          "coords": [
           1.875,
-          0.57185
+          -0.57185
          ]
         },
         {
          "coords": [
           1.91667,
-          0.45515
+          -0.45515
          ]
         },
         {
          "coords": [
           1.95833,
-          0.3318
+          -0.3318
          ]
         },
         {
          "coords": [
           2.0,
-          0.20462
+          -0.20462
          ]
         },
         {
          "coords": [
           2.04167,
-          0.07635
+          -0.07635
          ]
         },
         {
@@ -3612,16 +3616,16 @@
           0.99995
          ]
         }
-       ],
-       "channelComponentName": "Rotation W"
+       ]
       }
-     ],
-     "jointIndex": 0,
-     "channelName": "Rotation"
+     ]
     },
     {
+     "channelName": "Scale",
+     "jointIndex": 0,
      "channelComponents": [
       {
+       "channelComponentName": "Scale X",
        "keyFrames": [
         {
          "coords": [
@@ -4133,10 +4137,10 @@
           1.0
          ]
         }
-       ],
-       "channelComponentName": "Scale X"
+       ]
       },
       {
+       "channelComponentName": "Scale Y",
        "keyFrames": [
         {
          "coords": [
@@ -4648,10 +4652,10 @@
           1.0
          ]
         }
-       ],
-       "channelComponentName": "Scale Y"
+       ]
       },
       {
+       "channelComponentName": "Scale Z",
        "keyFrames": [
         {
          "coords": [
@@ -5163,15 +5167,11 @@
           1.0
          ]
         }
-       ],
-       "channelComponentName": "Scale Z"
+       ]
       }
-     ],
-     "jointIndex": 0,
-     "channelName": "Scale"
+     ]
     }
-   ],
-   "animationName": "Jump"
+   ]
   }
  ]
 }
