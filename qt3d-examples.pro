@@ -7,5 +7,6 @@ SUBDIRS += \
     baked-keyframe-animation \
     tower-defence \
     pbr-textured-cube \
-    skinned-mesh
+    skinned-mesh \
+    bouncing-ball
 
