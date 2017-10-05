@@ -59,6 +59,7 @@ int main(int argc, char* argv[])
     view.registerAspect(new Qt3DAnimation::QAnimationAspect());
 
     view.setSource(QUrl("qrc:/main.qml"));
+    view.resize(1920, 1080);
     view.show();
 
     return app.exec();

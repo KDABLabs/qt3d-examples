@@ -68,7 +68,7 @@ DefaultSceneEntity {
     }
 
     AnimationClipLoader {
-        id: thrillerClip
+        id: animationClip
         source: "qrc:/assets/gltf/2.0/Robot/robot.gltf"
     }
 
@@ -78,18 +78,10 @@ DefaultSceneEntity {
         transform.rotationX: 90
 
         source: "qrc:/assets/gltf/2.0/Robot/robot.gltf"
-        clip: thrillerClip
+        clip: animationClip
 
         effect: texturedSkinnedPbrEffect
-        baseColor: TextureLoader {
-            source: "qrc:/assets/gltf/2.0/Robot/robot_basecolor.png"
-            format: Texture.SRGB8_Alpha8
-            mirrored: false
-        }
-        metalness: TextureLoader { mirrored: false; source: "qrc:/assets/gltf/2.0/Robot/robot_metallic.png" }
-        roughness: TextureLoader { mirrored: false; source: "qrc:/assets/gltf/2.0/Robot/robot_roughness.png" }
-        normal: TextureLoader { mirrored: false; source: "qrc:/assets/gltf/2.0/Robot/robot_normal.png" }
-        ambientOcclusion: TextureLoader { mirrored: false; source: "qrc:/assets/gltf/2.0/Robot/robot_occlusion.png" }
+        textureBaseName: "qrc:/assets/gltf/2.0/Robot/robot"
     }
 
     NodeInstantiator {
@@ -126,7 +118,7 @@ DefaultSceneEntity {
             transform.translation: Qt.vector3d(model.x, 0, model.z)
 
             source: "qrc:/assets/gltf/2.0/Robot/robot.gltf"
-            clip: thrillerClip
+            clip: animationClip
 
             effect: skinnedPbrEffect
             baseColor: instantiator.colors[model.color]

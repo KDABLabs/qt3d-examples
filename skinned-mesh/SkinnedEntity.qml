@@ -11,13 +11,8 @@ Entity {
     property alias createJointsEnabled: skeleton.createJointsEnabled
     property alias transform: transform
 
-    // TODO: Redo in C++ with logic to switch between texture or constant solid color
-    // and enable/disable shader graph layers accordingly
+    property alias textureBaseName: material.textureBaseName
     property alias baseColor: material.baseColor
-    property alias metalness: material.metalness
-    property alias roughness: material.roughness
-    property alias normal: material.normal
-    property alias ambientOcclusion: material.ambientOcclusion
 
     property alias rootJoint: skeleton.rootJoint
     property alias skeleton: skeleton
@@ -40,21 +35,43 @@ Entity {
         Material {
             id: material
 
-            property var baseColor: "red"
-            onBaseColorChanged: console.log(baseColor)
-            property var metalness: 0.1
-            property var roughness: 0.2
-            property var normal: Qt.rgba(0.5, 0.5, 1.0, 1.0); // Neutral normal map color
-            property var ambientOcclusion: "white"
+            property string textureBaseName: ""
+            property bool hasTextures: textureBaseName !== ""
+
+            property Texture baseColorMap: TextureLoader {
+                source: material.hasTextures ? textureBaseName + "_basecolor.png" : ""
+                format: Texture.SRGB8_Alpha8
+                mirrored: false
+            }
+            property Texture metalnessMap: TextureLoader {
+                mirrored: false
+                source: material.hasTextures ? textureBaseName + "_metallic.png" : ""
+            }
+            property Texture roughnessMap: TextureLoader {
+                mirrored: false
+                source: material.hasTextures ? textureBaseName + "_roughness.png" : ""
+            }
+            property Texture ambientOcclusionMap: TextureLoader {
+                mirrored: false
+                source: material.hasTextures ? textureBaseName + "_occlusion.png" : ""
+            }
+
+            property var baseColor: hasTextures ? Qt.rgba(1.0, 0.0, 0.0, 1.0) : baseColorMap
+            property var metalness: hasTextures ? 0.1 : metalnessMap
+            property var roughness: hasTextures ? 0.2 : roughnessMap
+            property var ambientOcclusion: hasTextures ? "white" : ambientOcclusionMap
 
             effect: root.effect
 
             parameters: [
-                Parameter { name: effect.useTextures ? "baseColorMap" : "baseColor"; value: material.baseColor },
-                Parameter { name: effect.useTextures ? "metalnessMap" : "metalness"; value: material.metalness },
-                Parameter { name: effect.useTextures ? "roughnessMap": "roughness"; value: material.roughness },
-                Parameter { name: effect.useTextures ? "normalMap" : "normal"; value: material.normal },
-                Parameter { name: effect.useTextures ? "ambientOcclusionMap" : "ambientOcclusion"; value: material.ambientOcclusion }
+                Parameter { name: "baseColorMap"; value: material.baseColorMap },
+                Parameter { name: "metalnessMap"; value: material.metalnessMap },
+                Parameter { name: "roughnessMap"; value: material.roughnessMap },
+                Parameter { name: "ambientOcclusionMap"; value: material.ambientOcclusionMap },
+                Parameter { name: "baseColor"; value: material.baseColor },
+                Parameter { name: "metalness"; value: material.metalness },
+                Parameter { name: "roughness"; value: material.roughness },
+                Parameter { name: "ambientOcclusion"; value: material.ambientOcclusion }
             ]
         }
     ]

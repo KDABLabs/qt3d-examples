@@ -13,7 +13,9 @@ Effect {
         Parameter { name: "metalness"; value: 0.1 },
         Parameter { name: "roughness"; value: 0.2 },
         Parameter { name: "normal"; value: Qt.rgba(0.5, 0.5, 1.0, 1.0) },
-        Parameter { name: "ambientOcclusion"; value: "white" }
+        Parameter { name: "ambientOcclusion"; value: "white" },
+        Parameter { name: "texCoordScale"; value: 1.0 },
+        Parameter { name: "normal"; value: Qt.rgba(0.5, 0.5, 1.0, 1.0) }
     ]
 
     techniques: [
@@ -37,7 +39,7 @@ Effect {
                     shaderProgram: prog
                     fragmentShaderGraph: "qrc:/shaders/graphs/metalrough.frag.json"
                     enabledLayers: root.useTextures
-                                   ? ["baseColorMap", "metalnessMap", "roughnessMap", "ambientOcclusionMap", "normalMap"]
+                                   ? ["baseColorMap", "metalnessMap", "roughnessMap", "ambientOcclusionMap", "normal"]
                                    : ["baseColor", "metalness", "roughness", "ambientOcclusion", "normal"]
                 }
             }
