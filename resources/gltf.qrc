@@ -38,7 +38,5 @@
         <file>assets/gltf/2.0/Robot/robot_normal.png</file>
         <file>assets/gltf/2.0/Robot/robot_basecolor.png</file>
         <file>assets/gltf/2.0/Robot/robot_occlusion.png</file>
-        <file>assets/gltf/2.0/Test-1/out-exported.json</file>
-        <file>assets/gltf/2.0/Test-1/out-manually-fixed.json</file>
     </qresource>
 </RCC>
