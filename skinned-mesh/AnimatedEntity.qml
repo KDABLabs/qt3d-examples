@@ -8,6 +8,7 @@ import QtQuick 2.9
 SkinnedEntity {
     id: riggedFigure1
     property alias clip: animator1.clip
+    property alias playbackRate: animationClock.playbackRate
 
     Timer {
         interval: 500
@@ -23,6 +24,8 @@ SkinnedEntity {
             channelMapper: ChannelMapper {
                 mappings: [ SkeletonMapping { skeleton: riggedFigure1.skeleton } ]
             }
+            clock: Clock { id: animationClock }
+            onRunningChanged: console.log("running = " + running)
         }
     ]
 }

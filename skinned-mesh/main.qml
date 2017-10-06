@@ -79,6 +79,7 @@ DefaultSceneEntity {
 
         source: "qrc:/assets/gltf/2.0/Robot/robot.gltf"
         clip: animationClip
+        playbackRate: 1.0
 
         effect: texturedSkinnedPbrEffect
         textureBaseName: "qrc:/assets/gltf/2.0/Robot/robot"
@@ -119,6 +120,7 @@ DefaultSceneEntity {
 
             source: "qrc:/assets/gltf/2.0/Robot/robot.gltf"
             clip: animationClip
+            playbackRate: 1.0
 
             effect: skinnedPbrEffect
             baseColor: instantiator.colors[model.color]
