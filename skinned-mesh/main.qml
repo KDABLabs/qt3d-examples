@@ -88,10 +88,11 @@ DefaultSceneEntity {
     NodeInstantiator {
         id: instantiator
         property var colors: [
-            Qt.rgba(0, 1, 0, 1),    // green
-            Qt.rgba(1, 0.6, 0, 1),  // orange
-            Qt.rgba(1, 0, 0, 1),    // red
-            Qt.rgba(0, 0, 1, 1),    // blue
+//            Qt.rgba(0, 1, 0, 1),    // green
+//            Qt.rgba(1, 0.6, 0, 1),  // orange
+//            Qt.rgba(1, 0, 0, 1),    // red
+//            Qt.rgba(0, 0, 1, 1),    // blue
+            "_green", "_gray", "_red", "_blue"
         ]
         model: ListModel {
             ListElement { color: 0; x: -3; z: -2 }
@@ -122,8 +123,11 @@ DefaultSceneEntity {
             clip: animationClip
             playbackRate: 1.0
 
-            effect: skinnedPbrEffect
-            baseColor: instantiator.colors[model.color]
+//            effect: skinnedPbrEffect
+//            baseColor: instantiator.colors[model.color]
+            effect: texturedSkinnedPbrEffect
+            textureBaseName: "qrc:/assets/gltf/2.0/Robot/robot"
+            textureBaseColor: instantiator.colors[model.color]
         }
     }
 }

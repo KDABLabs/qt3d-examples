@@ -12,6 +12,7 @@ Entity {
     property alias transform: transform
 
     property alias textureBaseName: material.textureBaseName
+    property alias textureBaseColor: material.textureBaseColor
     property alias baseColor: material.baseColor
 
     property alias rootJoint: skeleton.rootJoint
@@ -39,7 +40,10 @@ Entity {
             property bool hasTextures: textureBaseName !== ""
 
             property Texture baseColorMap: TextureLoader {
-                source: material.hasTextures ? textureBaseName + "_basecolor.png" : ""
+                source: material.hasTextures
+                        ? textureBaseName + material.textureBaseColor + "_basecolor.png"
+                        : ""
+                onSourceChanged: console.log(source)
                 format: Texture.SRGB8_Alpha8
                 mirrored: false
             }
@@ -60,6 +64,7 @@ Entity {
             property var metalness: hasTextures ? 0.1 : metalnessMap
             property var roughness: hasTextures ? 0.2 : roughnessMap
             property var ambientOcclusion: hasTextures ? "white" : ambientOcclusionMap
+            property string textureBaseColor: ""
 
             effect: root.effect
 

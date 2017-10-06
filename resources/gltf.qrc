@@ -49,5 +49,9 @@
         <file>assets/gltf/2.0/Robot/robot-idle.gltf</file>
         <file>assets/gltf/2.0/Robot/robot-talk.bin</file>
         <file>assets/gltf/2.0/Robot/robot-talk.gltf</file>
+        <file>assets/gltf/2.0/Robot/robot_blue_basecolor.png</file>
+        <file>assets/gltf/2.0/Robot/robot_gray_basecolor.png</file>
+        <file>assets/gltf/2.0/Robot/robot_green_basecolor.png</file>
+        <file>assets/gltf/2.0/Robot/robot_red_basecolor.png</file>
     </qresource>
 </RCC>
