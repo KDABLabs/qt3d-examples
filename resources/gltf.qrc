@@ -43,5 +43,11 @@
         <file>assets/gltf/2.0/BouncingBall/bounce.json</file>
         <file>assets/gltf/2.0/BouncingBall/roll.json</file>
         <file>assets/gltf/2.0/BouncingBall/throw.json</file>
+        <file>assets/gltf/2.0/Robot/robot-dance.bin</file>
+        <file>assets/gltf/2.0/Robot/robot-dance.gltf</file>
+        <file>assets/gltf/2.0/Robot/robot-idle.bin</file>
+        <file>assets/gltf/2.0/Robot/robot-idle.gltf</file>
+        <file>assets/gltf/2.0/Robot/robot-talk.bin</file>
+        <file>assets/gltf/2.0/Robot/robot-talk.gltf</file>
     </qresource>
 </RCC>
