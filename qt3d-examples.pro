@@ -8,5 +8,6 @@ SUBDIRS += \
     tower-defence \
     pbr-textured-cube \
     skinned-mesh \
-    bouncing-ball
+    bouncing-ball \
+    animated-skinned-mesh
 
