@@ -62,7 +62,7 @@ ControllerWidget::ControllerWidget(SceneController *sceneController,
     ui->setupUi(this);
 
     m_clipNames.push_back(QLatin1String(":/assets/gltf/2.0/Robot/robot.gltf"));
-    m_clipNames.push_back(QLatin1String(":/assets/gltf/2.0/Robot/robot-run.gltf"));
+    m_clipNames.push_back(QLatin1String(":/assets/gltf/2.0/Robot/robot-run-sprint.gltf"));
     m_clipNames.push_back(QLatin1String(":/assets/gltf/2.0/Robot/robot-idle.gltf"));
     m_clipNames.push_back(QLatin1String(":/assets/gltf/2.0/Robot/robot-talk.gltf"));
 

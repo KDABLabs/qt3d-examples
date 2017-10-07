@@ -55,5 +55,7 @@
         <file>assets/gltf/2.0/Robot/robot_red_basecolor.png</file>
         <file>assets/gltf/2.0/Robot/robot-run.gltf</file>
         <file>assets/gltf/2.0/Robot/robot-run.bin</file>
+        <file>assets/gltf/2.0/Robot/robot-run-sprint.gltf</file>
+        <file>assets/gltf/2.0/Robot/robot-run-sprint.bin</file>
     </qresource>
 </RCC>
