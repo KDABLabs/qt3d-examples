@@ -9,5 +9,5 @@ SUBDIRS += \
     pbr-textured-cube \
     skinned-mesh \
     bouncing-ball \
-    animated-skinned-mesh
-
+    animated-skinned-mesh \
+    blended-skinned-animation
