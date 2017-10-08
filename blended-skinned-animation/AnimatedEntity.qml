@@ -19,9 +19,9 @@ SkinnedEntity {
 
     Timer {
         id: timer
-        interval: 20
+        interval: 1000
         repeat: false
-        running: false
+        running: true
         onTriggered: animator1.running = true
     }
 
