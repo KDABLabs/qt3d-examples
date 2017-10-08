@@ -68,7 +68,6 @@ float SceneController::blendFactor() const
 
 void SceneController::setPlaybackRate(double playbackRate)
 {
-    qWarning("Floating point comparison needs context sanity check");
     if (qFuzzyCompare(m_playbackRate, playbackRate))
         return;
 
@@ -78,7 +77,6 @@ void SceneController::setPlaybackRate(double playbackRate)
 
 void SceneController::setBlendFactor(float blendFactor)
 {
-    qWarning("Floating point comparison needs context sanity check");
     if (qFuzzyCompare(m_blendFactor, blendFactor))
         return;
 

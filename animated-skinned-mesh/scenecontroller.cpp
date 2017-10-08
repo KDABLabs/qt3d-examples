@@ -69,7 +69,6 @@ QUrl SceneController::clipName() const
 
 void SceneController::setPlaybackRate(double playbackRate)
 {
-    qWarning("Floating point comparison needs context sanity check");
     if (qFuzzyCompare(m_playbackRate, playbackRate))
         return;
 
