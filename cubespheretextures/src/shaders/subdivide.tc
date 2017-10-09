@@ -1,0 +1,43 @@
+#version 430 core
+
+layout(vertices = 4) out;
+
+out VertexData {
+  flat int indexIntoUBO;
+  vec3 color;
+  vec2 texCoords;
+} vertexOut[];
+
+vec3 hsv2rgb(vec3 c)
+{
+    vec4 K = vec4(1.0, 2.0 / 3.0, 1.0 / 3.0, 3.0);
+    vec3 p = abs(fract(c.xxx + K.xyz) * 6.0 - K.www);
+    return c.z * mix(K.xxx, clamp(p - K.xxx, 0.0, 1.0), c.y);
+}
+
+#define TILE_SUBDIVISION 16
+
+void main(void)
+{
+  if (gl_InvocationID == 0) {
+      // TO DO: Adjust based on Camera distance / projection
+
+      // We want the inside row and columns to be subdivided TILE_SUBDIVISION times
+      // horizontal
+      gl_TessLevelInner[0] = TILE_SUBDIVISION;
+      // vertical
+      gl_TessLevelInner[1] = TILE_SUBDIVISION;
+
+      // We want the outside edges to be subdivided TILE_SUBDIVISION times
+      gl_TessLevelOuter[0] = TILE_SUBDIVISION;
+      gl_TessLevelOuter[1] = TILE_SUBDIVISION;
+      gl_TessLevelOuter[2] = TILE_SUBDIVISION;
+      gl_TessLevelOuter[3] = TILE_SUBDIVISION;
+  }
+
+  // Passthrough gl_Position and other values
+  gl_out[gl_InvocationID].gl_Position = vec4(gl_in[gl_InvocationID].gl_Position.xyz, 1.0);
+  vertexOut[gl_InvocationID].color = hsv2rgb(vec3(gl_PrimitiveID / 256.0, 0.5, 0.5));
+  // Retrieve ubo index from 4th component of gl_Position
+  vertexOut[gl_InvocationID].indexIntoUBO = int(gl_in[gl_InvocationID].gl_Position.w);
+}

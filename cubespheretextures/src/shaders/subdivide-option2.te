@@ -1,0 +1,72 @@
+#version 430 core
+
+layout(quads) in;
+
+uniform mat4 projectionMatrix;
+uniform mat4 viewMatrix;
+uniform vec3 eyePos;
+uniform float perspectiveFarPlaneDistance;
+uniform float logarithmicDepthConstant;
+uniform bool useLogarithmicDepth;
+uniform bool useElevation;
+uniform samplerCube elevationCubemap;
+
+in VertexData {
+  flat int indexIntoUBO;
+  vec3 color;
+  vec2 texCoords;
+} vertexIn[];
+
+out VertexData {
+  vec3 color;
+  vec2 texCoords;
+  vec3 eyePosition;
+  vec3 worldPosition;
+} vertexOut;
+
+out TesselData {
+  vec4 patchDistance;
+  flat ivec4 idxIntoSatelliteTextureInfo;
+} tesselOut;
+
+void main(void)
+{
+    vec4 positionAlongBottomEdge = mix(gl_in[0].gl_Position, gl_in[1].gl_Position, gl_TessCoord.x);
+    vec4 positionAlongTopEdge = mix(gl_in[2].gl_Position, gl_in[3].gl_Position, gl_TessCoord.x);
+    vec3 position = mix(positionAlongBottomEdge, positionAlongTopEdge, gl_TessCoord.y).xyz;
+    vertexOut.color = vertexIn[0].color;
+    vertexOut.texCoords = vec2(gl_TessCoord.x, gl_TessCoord.y);
+    tesselOut.patchDistance = vec4(gl_TessCoord.x, gl_TessCoord.y, 1 - gl_TessCoord.x, 1.0 - gl_TessCoord.y);
+
+    // Build the view matrix relative to the eye (that is with the eye in 0, 0, 0)
+    mat4 viewMatrixRTE = viewMatrix;
+    viewMatrixRTE[3] = vec4(0.0, 0.0, 0.0, viewMatrix[3][3]);
+
+    // Our position is relative to eye, so world pos is posRTE + eye
+    vec3 worldPosition = position + eyePos;
+    vertexOut.worldPosition = worldPosition;
+
+    vec3 displacementVec = vec3(0.0);
+    if (useElevation) {
+        // Displace vertex based on elevation information
+        vec4 heightInfo = texture(elevationCubemap, worldPosition);
+        // Normal from earth center to position is O (0, 0, 0) A (position)
+        // so N = normalize(A - O) == normalize(A)
+        displacementVec = normalize(position) * ((heightInfo.r * 256.0 + heightInfo.g + heightInfo.b / 256.0) - 32768.0);
+    }
+
+    vertexOut.eyePosition = (viewMatrixRTE * vec4(position + displacementVec, 1.0)).xyz;
+    gl_Position = projectionMatrix * viewMatrixRTE * vec4(position + displacementVec, 1.0);
+
+
+    tesselOut.idxIntoSatelliteTextureInfo = ivec4(vertexIn[0].indexIntoUBO,
+                                                  vertexIn[1].indexIntoUBO,
+                                                  vertexIn[2].indexIntoUBO,
+                                                  vertexIn[3].indexIntoUBO);
+
+    if (useLogarithmicDepth) {
+       // Logarithmic Depth
+       gl_Position.z = ((2.0 * log(logarithmicDepthConstant * gl_Position.z + 1.0) /
+                         log(logarithmicDepthConstant * perspectiveFarPlaneDistance + 1.0)) - 1.0) * gl_Position.w;
+    }
+}

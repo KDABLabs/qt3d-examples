@@ -1,0 +1,28 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/CameraController.qml</file>
+        <file>textures/test.png</file>
+        <file>textures/marble.jpg</file>
+        <file>shaders/subdivide.tc</file>
+        <file>shaders/wireframe.geom</file>
+        <file>shaders/passthrough.vert</file>
+        <file>qml/DynamicCubeMap.qml</file>
+        <file>qml/CubeMapRenderTarget.qml</file>
+        <file>shaders/cubemap.frag</file>
+        <file>shaders/cubemap.geom</file>
+        <file>shaders/cubemap.vert</file>
+        <file>shaders/cubemapwireframe.geom</file>
+        <file>qml/DebugCubeMap.qml</file>
+        <file>qml/AxesGnomon.qml</file>
+        <file>qml/FrameGraphOption2.qml</file>
+        <file>qml/FrameGraphOption1.qml</file>
+        <file>qml/mainOption2.qml</file>
+        <file>qml/CubeSphereMaterialOption2.qml</file>
+        <file>qml/mainOption1.qml</file>
+        <file>qml/CubeSphereMaterialOption1.qml</file>
+        <file>shaders/earth-option2.frag</file>
+        <file>shaders/subdivide-option2.te</file>
+        <file>shaders/earth-option1.frag</file>
+        <file>shaders/subdivide-option1.te</file>
+    </qresource>
+</RCC>
