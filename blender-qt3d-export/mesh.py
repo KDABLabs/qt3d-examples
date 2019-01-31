@@ -330,8 +330,8 @@ class VertexAttribute(object):
         AttributeType.POSITION: "defaultPositionAttributeName",
         AttributeType.NORMAL: "defaultNormalAttributeName",
         AttributeType.TEXT_COORD0: "defaultTextureCoordinateAttributeName",
-        AttributeType.TEXT_COORD1: "defaultTexture1CoordinateAttributeName",
-        AttributeType.TEXT_COORD2: "defaultTexture2CoordinateAttributeName",
+        AttributeType.TEXT_COORD1: "defaultTextureCoordinate1AttributeName",
+        AttributeType.TEXT_COORD2: "defaultTextureCoordinate2AttributeName",
         AttributeType.COLOR0: "defaultColorAttributeName",
         AttributeType.COLOR1: "defaultColor1AttributeName",
         AttributeType.COLOR2: "defaultColor2AttributeName"
